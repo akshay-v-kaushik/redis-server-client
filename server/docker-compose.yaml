@@ -1,0 +1,8 @@
+version: "1.0"
+services:
+  server:
+    image: redis-server:latest
+    build: .
+    ports:
+      - "1234:1234"
+    restart: unless-stopped

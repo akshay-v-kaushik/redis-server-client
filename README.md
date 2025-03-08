@@ -21,7 +21,7 @@ This project consists of a custom Redis server clone deployed on Kubernetes (usi
 
    ```bash
    git clone https://github.com/akshay-v-kaushik/redis-server-client.git
-   cd redis-server-client/redis-clone-chart
+   cd ./redis-server-client
    ```
 
 2. **Deploy the Helm Chart:**

@@ -1,6 +1,6 @@
 # Redis Server-Client
 
-This project consists of a custom Redis server clone deployed on Kubernetes (using k3s and Helm) and a corresponding client that runs locally. The pre-built server image is already available on Docker Hub, so users only need to deploy it and interact with it using the client.
+This project consists of a custom Redis server clone deployed on Kubernetes (using k3s and Helm) and a corresponding client that runs locally.
 
 ---
 
@@ -29,7 +29,7 @@ This project consists of a custom Redis server clone deployed on Kubernetes (usi
    The Helm chart is configured to use the pre-built server image available on Docker Hub. Install the release by running:
 
    ```bash
-   helm install myredis ./redis-clone-chart
+   helm install redis-server-clone ./redis-clone-chart
    ```
 
 3. **Verify the Deployment:**
@@ -66,7 +66,7 @@ Since the client connects to `127.0.0.1:1234`, use port-forwarding to access the
    In a terminal, run:
 
    ```bash
-   kubectl port-forward svc/myredis 1234:1234
+   kubectl port-forward svc/<svc-name> 1234:1234
    ```
 
    This command forwards your local port 1234 to the server's port 1234 in the Kubernetes cluster.
